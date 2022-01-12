@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  transition: background-color 0.5s linear;
+  -webkit-transition: background-color 0.5s linear;
+  -ms-transition: background-color 0.5s linear;
+}
+
+.header-fixed {
+  position: fixed;
+  background-color: black;
+}
+
+nav {
+  padding: 1.5rem 3rem;
+  position: relative;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.logo-bg {
+  color: white;
+}
+
+.ck-collapse {
+  display: none;
+}
+
+.ck-collapse:checked ~ .collapse {
+  width: 40%;
+}
+
+.ck-collapse:checked ~ .collapse-icon {
+  color: black;
+}
+
+.ck-collapse:checked ~ .collapse ul li a {
+  opacity: 1;
+}
+
+.collapse-icon {
+  float: right;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  z-index: 99;
+  font-size: 2rem;
+  margin-top: 0.7rem;
+  color: white;
+}
+
+.collapse {
+  transition: width 0.5s ease-in-out;
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  background-color: white;
+  width: 0%;
+  height: 100vh;
+  box-shadow: -0.1rem 0rem 0.5rem black;
+}
+
+.collapse ul {
+  list-style-type: none;
+  margin: 8rem 4rem 2rem 0rem;
+}
+
+.collapse ul li {
+  padding: 2rem 0rem;
+  text-align: right;
+  transition: padding 0.1s ease-in-out;
+}
+
+.collapse ul li:hover {
+  padding-right: 2rem;
+}
+
+.collapse ul li a {
+  font-size: 1.5rem;
+  color: black;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* banner */
+.banner-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.banner-left {
+  flex: 50%;
+  width: 100%;
+  margin: auto;
+  padding: 6rem;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.banner-right {
+  flex: 50%;
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.banner-img-right {
+  height: 100vh;
+  object-fit: cover;
+  object-position: 100% 0; /* 100% from left and 0% from top */
+}
+
+/* about */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.about-left {
+  flex: 50%;
+  width: 100%;
+}
+
+.about-right {
+  flex: 50%;
+  width: 100%;
+  margin: auto;
+  padding: 6rem;
+  font-size: 1.5rem;
+}
+
+.about-img-left {
+  height: 100vh;
+  object-fit: cover;
+  object-position: 50% 0; /* 100% from left and 0% from top */
+}
+
+/* education */
+
+.education-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.education-left {
+  flex: 50%;
+  width: 100%;
+  margin: auto;
+  padding: 6rem;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.education-right {
+  flex: 50%;
+  width: 100%;
+}
+
+.education-img-right {
+  height: 100vh;
+  object-fit: cover;
+  object-position: 80% 0; /* 100% from left and 0% from top */
+}
+
+/* timeline*/
+.timeline-left {
+  margin: 2rem 0rem;
+  padding: 1rem 0rem;
+  border-right: 3px solid black;
+}
+
+.time {
+  position: relative;
+  margin: 3rem 0rem;
+}
+
+.bullet {
+  height: 2rem;
+  width: 2rem;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  right: -11px;
+  text-align: center;
+}
+
+.line {
+  border-top: 3px dotted black;
+  width: 20%;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+}
+
+.desc {
+  margin-right: 20%;
+  width: 70%;
+  display: inline-block;
+}
+
+/*skill*/
+
+.skill {
+  background-color: black;
+  color: white;
+  height: 30rem;
+  margin: auto;
+}
+
+.skill-title {
+  text-align: center;
+  width: 100%;
+  padding: 3rem;
+  font-size: 1.5rem;
+}
+
+.skill-container {
+  flex: 100%;
+  height: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-item {
+  flex: 20%;
+  margin: auto;
+  text-align: center;
+}
+
+.skill-item i {
+  font-size: 4rem;
+}
+
+.skill-item p {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+/*quote*/
+
+.quote-container {
+  margin: 5rem;
+  text-align: center;
+  height: 40rem;
+  position: relative;
+}
+
+.quote {
+  position: absolute;
+  border: 0.4rem solid black;
+  padding: 5rem;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  background-color: white;
+}
+
+/*work*/
+.work-container {
+  margin: 0rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.work-item {
+  text-align: center;
+  position: relative;
+}
+
+.img-work {
+  object-fit: cover;
+  object-position: 50% 0; /* 100% from left and 0% from top */
+}
+
+.work-text {
+  padding: 5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  color: white;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.work-text p {
+  display: block;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem;
+  border: 1px solid white;
+  transition: background-color 0.1s liner;
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+.img-work:hover ~ .work-text,
+.work-text:hover {
+  opacity: 1;
+}
+
+/* contact */
+.contact-container {
+  height: 50rem;
+  margin: 5rem;
+  overflow: hidden;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.contact-group {
+  width: 60%;
+  margin: 5rem auto;
+}
+
+.contact-input {
+  position: relative;
+}
+
+.input-label {
+  position: absolute;
+  font-size: 1.5rem;
+  top: -15px;
+  left: 30px;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  color: black;
+  font-weight: 700;
+}
+
+.input-text {
+  border: 0.3rem solid black;
+  display: block;
+  width: 100%;
+  margin: 1.5rem;
+  padding: 1rem;
+  color: rgb(27, 27, 27);
+  font-weight: 900;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.btn-contact {
+  background-color: black;
+}
+
+.btn-contact:hover {
+  background-color: grey;
+  color: white;
+}
+
+/*footer*/
+footer {
+  background-color: black;
+  height: 6rem;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+
+/*mobile*/
+@media only screen and (max-width: 900px) {
+  .banner-img-right {
+    height: 50vh;
+    object-fit: cover;
+    object-position: 100% 0; /* 100% from left and 0% from top */
+  }
+
+  .about-right {
+    padding: 3rem;
+  }
+
+  .about-right p {
+    font-size: 1rem;
+  }
+
+  .about-img-left {
+    height: 50vh;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+
+  .education-left {
+    flex: 50%;
+    width: 100%;
+    margin: auto;
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+    text-align: right;
+  }
+
+  .education-img-right {
+    height: 50vh;
+    object-fit: cover;
+    object-position: 85% 0;
+  }
+
+  .timeline-left {
+    margin: 1rem 0rem;
+    padding: 1rem 0rem;
+  }
+
+  .time {
+    margin: 1.5rem 0rem;
+  }
+
+  .bullet {
+    height: 1rem;
+    width: 1rem;
+    right: -6.5px;
+  }
+
+  .line {
+    top: 0.3rem;
+    width: 15%;
+  }
+
+  .desc {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  .desc h1 {
+    font-size: 1.2rem;
+  }
+
+  .skill-item {
+    flex: 30%;
+  }
+
+  .quote-container {
+    margin: 3rem;
+  }
+
+  .quote {
+    padding: 3rem;
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .work-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .work-text {
+    opacity: 1;
+    padding: 2rem 3rem;
+  }
+
+  .work-text p {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .contact-container {
+    margin: 3rem 1rem;
+  }
+
+  .contact-group {
+    width: 90%;
+    margin: 3rem auto;
+  }
+
+  .contact-input {
+    position: relative;
+  }
+
+  .input-label {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  .input-text {
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
