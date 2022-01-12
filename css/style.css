@@ -82,7 +82,7 @@ nav {
   top: 0rem;
   background-color: white;
   width: 0%;
-  height: 100vh;
+  height: 100rem;
   box-shadow: -0.1rem 0rem 0.5rem black;
 }
 
@@ -136,7 +136,7 @@ nav {
 }
 
 .banner-img-right {
-  height: 100vh;
+  height: 100rem;
   object-fit: cover;
   object-position: 100% 0; /* 100% from left and 0% from top */
 }
@@ -162,7 +162,7 @@ nav {
 }
 
 .about-img-left {
-  height: 100vh;
+  height: 100rem;
   object-fit: cover;
   object-position: 50% 0; /* 100% from left and 0% from top */
 }
@@ -189,7 +189,7 @@ nav {
 }
 
 .education-img-right {
-  height: 100vh;
+  height: 100rem;
   object-fit: cover;
   object-position: 80% 0; /* 100% from left and 0% from top */
 }
@@ -415,7 +415,7 @@ footer {
 /*mobile*/
 @media only screen and (max-width: 900px) {
   .banner-img-right {
-    height: 50vh;
+    height: 50rem;
     object-fit: cover;
     object-position: 100% 0; /* 100% from left and 0% from top */
   }
@@ -429,7 +429,7 @@ footer {
   }
 
   .about-img-left {
-    height: 50vh;
+    height: 50rem;
     object-fit: cover;
     object-position: 50% 0;
   }
@@ -444,7 +444,7 @@ footer {
   }
 
   .education-img-right {
-    height: 50vh;
+    height: 50rem;
     object-fit: cover;
     object-position: 85% 0;
   }
