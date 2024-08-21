@@ -5,38 +5,24 @@ body, html {
   width: 100%;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
-.c-yellow-dark{
-  background-color: rgb(231, 230, 147);
-}
-
-.c-yellow-bright{
-  background-color: rgb(240, 239, 174);
-}
-
-.c-pink-light{
-  background-color: #f6dcea;
-}
-
-.c-pink-dark{
-  background-color: #dfc1d1;;
-}
-
-.c-white{
-  background-color: rgb(255, 255, 255);
-}
+.c-yellow-dark { background-color: rgb(231, 230, 147); }
+.c-yellow-bright { background-color: rgb(240, 239, 174); }
+.c-pink-light { background-color: #f6dcea; }
+.c-pink-dark { background-color: #dfc1d1; }
+.c-white { background-color: rgb(255, 255, 255); }
 
 .grid-background {
   background: linear-gradient(to bottom right, #c6e8e7, #59c7d2);
   background-size: cover;
-  position: fixed; /* Ensure the background stays fixed */
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1; /* Ensure the background is behind other elements */
+  z-index: -1;
 }
 
 .grid-background::before {
@@ -46,62 +32,45 @@ body, html {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: 
-      linear-gradient(to right, #ffffff 1px, transparent 1px),
-      linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+  background-image: linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px);
   background-size: 30px 30px;
-  pointer-events: none; /* Ensure the grid doesn't interfere with interaction */
+  pointer-events: none;
   z-index: -1;
 }
 
 .bg-img {
   background-image: url('../img/stars.png') !important;
   background-position: center !important;
-  background-repeat: repeat-y !important; /* Ensures the image repeats vertically */
-  background-size: auto; /* Adjusts the image size to default */
-  position: fixed; /* Ensures the background is always present as the page scrolls */
+  background-repeat: repeat-y !important;
+  background-size: auto;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100%; /* Ensures the image covers the full height of the page */
+  min-height: 100%;
   z-index: -1;
 }
 
-.title{
-  font-size: 18px;
-}
-
-ul{
-  margin: 0;
-}
-
-li{
-  margin-top: 5px;
-}
-
-
-/* ====================================================================================*/
-
 .window {
   border: 2px solid black;
-  width: 90%; /* Make the window width relative */
-  max-width: 500px; /* Set a max-width to keep it from becoming too large */
-  background-color: transparent; /* Make background transparent */
-  margin: 0 auto; /* Center the element horizontally */
-  margin-top: 35px;
+  width: 100%;
+  max-width: 700px;
+  background-color: transparent;
+  margin: 35px auto 0;
   padding: 0;
-  display: block; /* Ensure it's a block element */
-  position: relative; /* Ensure it stays above the background */
-  z-index: 1; /* Ensure it is above the grid background */
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .window-header {
-  font-size: 14px; /* Reduced from 20px by 30% */
+  background-color: #f6dcea;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: black;
-  padding: 5px 10px;
+  padding: 3px 10px;
   border-radius: 5px 5px 0 0;
 }
 
@@ -111,10 +80,10 @@ li{
 }
 
 .button {
-  width: 16px; /* Adjusted size to match Windows buttons */
-  height: 16px;
-  padding: 15px;
-  background-color: transparent; /* White color for Windows buttons */
+  width: 5px;
+  height: 5px;
+  padding: 10px;
+  background-color: transparent;
   border: 2px solid black;
   display: flex;
   align-items: center;
@@ -128,28 +97,24 @@ li{
   color: black;
 }
 
-
-/*==========================*/
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: -10px 0px 0px 0px;
-    z-index: 1;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -10px 0 0;
+  z-index: 1;
 }
 
 .row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  width: 80%;
-  max-width: 800px;
-  
+  width: 100%;
+  max-width: 1000px;
 }
 
 .left-box {
-  grid-row: span 2; /* Makes the left box span two rows */
+  grid-row: span 2;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -157,43 +122,90 @@ li{
 
 .window-2 {
   border: 2px solid black;
-  width: 90%; /* Make the window width relative */
-  max-width: 500px; /* Set a max-width to keep it from becoming too large */
-  background-color: transparent; /* Make background transparent */
-  margin: 0 auto; /* Center the element horizontally */
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  box-shadow: 10px 15px black;
+  margin: 0 auto;
   padding: 0;
-  display: block; /* Ensure it's a block element */
-  position: relative; /* Ensure it stays above the background */
-  z-index: 1; /* Ensure it is above the grid background */
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
-.row-2 {
+.window-header-2 {
+  background-color: white;
+  font-size: 14px;
   display: flex;
-  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 3px 10px;
 }
 
-.left-box-2 {
-  margin: -130px 50px 50px -90px;
-  flex: 2;
+.window-body-2 {
+  background-color: pink;
+  border: 2px solid black;
+  margin: 0 10px 10px;
+  padding: 5px;
+  color: black;
 }
 
-.right-box-2 {
-  margin: 0px 0px 0px -220px;
-  flex: 1; /* This makes the right box half the width of the left box */
-}
+/* Mobile view adjustments */
+@media only screen and (max-width: 768px) {
+  .grid-background::before {
+    background-size: 15px 15px;
+  }
 
+  .bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
+  .window {
+    font-size: 14px;
+    border: 1px solid black;
+    width: 90%;
+    margin-top: 35px;
+  }
 
+  .window-buttons {
+    gap: 3px;
+  }
 
-@media (max-width: 600px) {
+  .button {
+    border: 1px solid black;
+  }
+
+  .window-body {
+    border-top: 1px solid black;
+    padding: 7px;
+  }
+
   .container {
-      grid-template-columns: 1fr; /* Stack boxes vertically on smaller screens */
+    display: block;
+    margin: 10px;
+  }
+
+  .row {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
   }
 
   .left-box {
-      grid-row: auto; /* Remove the row span on smaller screens */
+    display: block;
+  }
+
+  .window-2 {
+    box-shadow: 7px 7px black;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .window-body-2 {
+    border: 1px solid black;
+    margin: 2px 5px 5px;
+    padding: 0;
   }
 }
-
-
-
