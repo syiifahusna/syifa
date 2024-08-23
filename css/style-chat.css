@@ -1,0 +1,136 @@
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.message {
+    display: flex;
+    gap: 10px;
+    max-width: 85%;
+}
+
+.received {
+    align-self: flex-start;
+}
+
+.message-content-left {
+    margin: 0px 5px;
+    background-color: white; /* Bubble background color */
+    color: black;
+    padding: 12px;
+    border-radius: 20px;
+    position: relative;
+    width: 80%;
+    font-size: 13px;
+}
+
+.message-content-left::after {
+    content: '';
+    position: absolute;
+    top: 23px;
+    left: 1%;
+    transform: translate(-100%, -50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
+.timestamp {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #999;
+    text-align: right;
+}
+
+.sent {
+    margin: 8px 0px;
+    display: flex;
+    justify-content: flex-end; /* Aligns bubble to the right */
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.message-content-right {
+    margin: 0px 5px;
+    background-color: white; /* Bubble background color */
+    color: black;
+    padding: 12px;
+    border-radius: 20px;
+    position: relative;
+    width: 80%;
+    font-size: 13px;
+    right: 0px;
+}
+
+.message-content-right::after {
+    content: '';
+    position: absolute;
+    top: 23px;
+    right: 1%;
+    transform: translate(100%, -50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+}
+
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    margin-right: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.send-button {
+    padding: 8px 13px;
+    border: 1px solid rgb(250, 71, 101);
+    border-radius: 20px;
+    background-color: rgb(250, 71, 101);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .profile-pic {
+        margin-left: 5px ;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+
+    .message {
+       margin-top: 7px;
+    }
+
+    .message-content-right {
+        margin: 0px 5px;
+        background-color: white;
+        color: black;
+        padding: 12px;
+        border-radius: 20px;
+        position: relative;
+        width: 80%;
+        font-size: 13px;
+        right: 10px;
+    }
+
+}
